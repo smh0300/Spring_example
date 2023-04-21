@@ -1,5 +1,6 @@
 package com.example.spring_example.order;
 
+import com.example.spring_example.AppConfig;
 import com.example.spring_example.member.Grade;
 import com.example.spring_example.member.Member;
 import com.example.spring_example.member.MemberService;
@@ -14,8 +15,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class OrderServiceImplTest {
 
-    MemberService memberService = new MemberServiceImpl();
-    OrderService orderService = new OrderServiceImpl();
+    AppConfig appConfig = new AppConfig();
+    MemberService memberService = appConfig.memberService();
+    OrderService orderService = appConfig.orderService();
     @Test
     void 주문(){
         //given
