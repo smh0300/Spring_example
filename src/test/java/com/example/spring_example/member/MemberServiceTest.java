@@ -3,6 +3,7 @@ package com.example.spring_example.member;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
@@ -19,6 +20,6 @@ class MemberServiceTest {
         Member findMember = memberService.findMember(member.getId());
 
         //then
-        Assertions.assertThat(member).isEqualTo(findMember);
+        assertThat(member).isEqualTo(findMember);
     }
 }

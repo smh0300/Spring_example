@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.internal.matchers.Or;
 import org.w3c.dom.html.HTMLBRElement;
 
+import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class OrderServiceImplTest {
@@ -25,7 +26,7 @@ class OrderServiceImplTest {
         Order order = orderService.createOrder(member.getId(), "itemA", 10000);
 
         //then
-        Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
+        assertThat(order.getDiscountPrice()).isEqualTo(1000);
     }
 
 }
